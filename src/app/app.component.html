@@ -1,0 +1,147 @@
+<div class="body-container">
+  <div style="position: absolute">
+    <img src="../assets/image/logo.png" alt="" style="width: 200px">
+  </div>
+ <div class="header-container">
+   <div class="header">
+      <div class="header-image-container">
+        <img src="../assets/image/home.svg" alt="" class="header-image">
+      </div>
+      <label class="header-label">Home</label> 
+   </div>
+   <div class="header">
+      <div class="header-image-container">
+        <img src="../assets/image/messesage.svg" alt="" class="header-image">
+      </div>
+      <label class="header-label">Messages</label> 
+   </div>
+   <div class="header">
+      <div class="header-image-container">
+        <img src="../assets/image/list.svg" alt="" class="header-image">
+      </div>
+      <label class="header-label">Wishlist</label> 
+   </div>
+   <div class="header">
+      <div class="header-image-container">
+          <img src="../assets/image/settings.svg" alt="" class="header-image">
+      </div>
+      <label class="header-label">Settings</label> 
+   </div>
+   <div class="header">
+      <div class="header-image-container">
+        <img src="../assets/image/account.svg" alt="" class="header-image">
+      </div>
+      <label class="header-label">My Account</label> 
+   </div>
+ </div>
+ <div class="data-one-container">
+    <div class="data-smart-filters">
+      <div>
+        <img src="../assets/image/bombilla.svg" alt="" class="data-one-light-bulb">
+      </div>
+      <div class="data-one-title-smart-filters"> Smart Filters</div>
+    </div>
+    <div class="data-filters">
+      <div class="data-space-filter">
+        <div class="data-icon-sale">
+          <img src="../assets/image/porcentaje.svg" alt="" class="data-one-icon-sale">
+        </div>
+        <div class="data-toogle">
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="data-space-filter">
+        <div class="data-icon-sale">
+          <img src="../assets/image/calendario.svg" alt="" class="data-one-icon-sale">
+        </div>
+        <div class="data-toogle">
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="data-space-filter">
+        <div class="data-icon-sale">
+          <img src="../assets/image/favorito.svg" alt="" class="data-one-icon-sale">
+        </div>
+        <div class="data-toogle">
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div>
+    <div class="data-one-last">
+      <div class="data-smart-status">
+        Status
+      </div>
+      <div>
+          <input class="menu-search-icon" type="text" placeholder="Search">
+      </div>
+      <div style="margin-top: 20px;">
+          <button type="button" class="data-one-button">Delivered</button>
+      </div>
+    </div>
+    </div>
+ </div>
+ <div class="data-container">
+    <div class="menu-container">
+        <div>
+            <img src="../assets/image/comprobado.svg" alt="" class="data-check-all">
+        </div>
+      <div style="text-align: right">
+        <input class="menu-search" type="text" placeholder="Search">
+      </div>
+    </div>
+    <div class="sub-data-container">
+      <div class="sub-data-array" *ngFor="let data of arrayData; let i = index">
+        <div>
+          <img src="../assets/image/comprobado.svg" alt="" class="data-check">
+        </div>
+        <div class="data-date">
+          {{data.date}}
+        </div>
+        <div class="data-trip">
+          <div class="data-trip-from">
+              {{data.from}}
+          </div>
+          <div class="data-trip-container-arrow">
+              <img src="../assets/image/flecha.svg" alt="" class="data-trip-arrow">
+          </div>
+          <div class="data-trip-to">
+              {{data.to}}
+          </div>
+        </div>
+        <div class="data-price">
+          <div class="data-price-container">
+            <img src="../assets/image/camion.svg" alt="" class="data-trip-arrow">
+          </div>
+          <div class="data-price-value">
+              {{data.price}}
+          </div>
+           <div class="data-price-cant">
+              <input type="number" value="1" class="data-price-value-cant">
+           </div>
+           <div class="data-price-container-points">
+              <img src="../assets/image/threepoints.svg" alt="" class="data-trip-points">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="data-add">
+        <button class="button xlarge circle red">
+          <div style="font-size: 50px;margin-bottom: 10px;">+</div>
+        </button>
+    </div>
+    <div>
+
+    </div>
+ </div>
+</div>
+<router-outlet></router-outlet>
